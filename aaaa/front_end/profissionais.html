@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profissionais - Infratec</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            Infratec
+        </div>
+
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="funcionarios.html">Funcionarios</a>
+            <a href="treinamentos.html">Treinamentos</a>
+            <a href="epis.html">EPIs</a>
+            <a href="ocorrencias.html">Ocorrencias</a>
+            <a href="inspecoes.html">Inspecoes</a>
+            <a href="login.html">Login</a>
+            <a href="relatorios.html">Relatorios</a>
+        </nav>
+    </header>
+
+    <main class="professional_page">
+
+        <section class="professional_title">
+            <p class="small_title">
+                EQUIPE TÉCNICA
+            </p>
+
+            <h1>
+                Profissionais de Segurança
+            </h1>
+
+            <p>
+                Gestão e acompanhamento dos especialistas responsáveis pelas atividades de SST, treinamentos e auditoria.
+            </p>
+        </section>
+
+        <!-- Destaques dos Responsáveis -->
+        <section class="professional_cards">
+
+            <div class="professional_card">
+                <span class="badge">Ativo</span>
+                <h2>Carlos Silva</h2>
+                <p class="role">Técnico em Segurança do Trabalho</p>
+                <p><strong>Registro:</strong> MTE/PR 12345</p>
+                <p><strong>Responsabilidade:</strong> Gestão de treinamentos e integração de novos colaboradores.</p>
+                <p><strong>E-mail:</strong> carlos.silva@infratec.com</p>
+            </div>
+
+            <div class="professional_card">
+                <span class="badge">Ativo</span>
+                <h2>Ana Souza</h2>
+                <p class="role">Engenheira de Segurança</p>
+                <p><strong>Registro:</strong> CREA-PR 67890</p>
+                <p><strong>Responsabilidade:</strong> Inspeções técnicas, laudos de insalubridade e auditorias.</p>
+                <p><strong>E-mail:</strong> ana.souza@infratec.com</p>
+            </div>
+
+            <div class="professional_card">
+                <span class="badge">Ativo</span>
+                <h2>Pedro Lima</h2>
+                <p class="role">Médico do Trabalho</p>
+                <p><strong>Registro:</strong> CRM/PR 11223</p>
+                <p><strong>Responsabilidade:</strong> Coordenação do PCMSO e exames ocupacionais.</p>
+                <p><strong>E-mail:</strong> pedro.lima@infratec.com</p>
+            </div>
+
+        </section>
+
+        <!-- Tabela Completa de Cadastro -->
+        <section class="table_box">
+            <div class="table_header">
+                <h2>Lista Geral de Profissionais</h2>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Especialidade</th>
+                        <th>Registro Profissional</th>
+                        <th>Telefone</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>PRF-001</td>
+                        <td>Carlos Silva</td>
+                        <td>Técnico em SST</td>
+                        <td>MTE/PR 12345</td>
+                        <td>(41) 99999-1001</td>
+                        <td><span class="status_active">Ativo</span></td>
+                    </tr>
+                    <tr>
+                        <td>PRF-002</td>
+                        <td>Ana Souza</td>
+                        <td>Engenheira de Segurança</td>
+                        <td>CREA-PR 67890</td>
+                        <td>(41) 99999-1002</td>
+                        <td><span class="status_active">Ativo</span></td>
+                    </tr>
+                    <tr>
+                        <td>PRF-003</td>
+                        <td>Pedro Lima</td>
+                        <td>Médico do Trabalho</td>
+                        <td>CRM/PR 11223</td>
+                        <td>(41) 99999-1003</td>
+                        <td><span class="status_active">Ativo</span></td>
+                    </tr>
+                    <tr>
+                        <td>PRF-004</td>
+                        <td>Mariana Costa</td>
+                        <td>Enfermeira do Trabalho</td>
+                        <td>COREN/PR 44556</td>
+                        <td>(41) 99999-1004</td>
+                        <td><span class="status_inactive">Licença</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Formulário para Cadastro de Novos Profissionais -->
+        <section class="table_box">
+            <h2>Cadastrar Novo Profissional</h2>
+            <form>
+                <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+                    <div style="flex: 1; min-width: 250px;">
+                        <label>Nome Completo</label><br>
+                        <input type="text" name="nome_profissional" placeholder="Ex: João Oliveira" style="width: 100%; padding: 12px; margin-top: 8px; margin-bottom: 15px;">
+                    </div>
+                    <div style="flex: 1; min-width: 250px;">
+                        <label>Especialidade / Cargo</label><br>
+                        <input type="text" name="cargo" placeholder="Ex: Auditor de SST" style="width: 100%; padding: 12px; margin-top: 8px; margin-bottom: 15px;">
+                    </div>
+                </div>
+
+                <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+                    <div style="flex: 1; min-width: 250px;">
+                        <label>Registro Profissional (MTE/CREA/CRM)</label><br>
+                        <input type="text" name="registro" placeholder="Ex: CREA 123456/D" style="width: 100%; padding: 12px; margin-top: 8px; margin-bottom: 15px;">
+                    </div>
+                    <div style="flex: 1; min-width: 250px;">
+                        <label>E-mail de Contato</label><br>
+                        <input type="email" name="email" placeholder="profissional@infratec.com" style="width: 100%; padding: 12px; margin-top: 8px; margin-bottom: 15px;">
+                    </div>
+                </div>
+
+                <button type="submit" class="button">Salvar Profissional</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Infratec 2026</p>
+    </footer>
+</body>
+</html>

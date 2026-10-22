@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funcionarios</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            Infratec
+        </div>
+
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="funcionarios.html">Funcionarios</a>
+            <a href="treinamentos.html">Treinamentos</a>
+            <a href="epis.html">EPIs</a>
+            <a href="ocorrencias.html">Ocorrencias</a>
+            <a href="inspecoes.html">Inspecoes</a>
+            <a href="login.html">login</a>
+            <a href="profissionais.html">profissionais</a>
+            <a href="relatorios.html">relatorios</a>
+        </nav>
+    </header>
+
+    <main class="page">
+
+        <section class="page_header">
+            <p class="small_title">
+                CADASTRO
+            </p>
+
+            <h1>
+                Funcionarios
+            </h1>
+
+            <p>
+                Controle dos funcionarios cadastrados.
+            </p>
+        </section>
+
+        <section class="table_box">
+
+            <div class="table_header">
+                <h2>
+                    Funcionarios cadastrados
+                </h2>
+
+                <!-- Botão aciona o modal -->
+                <button class="button" onclick="openModal()">
+                    Novo funcionario
+                </button>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Matricula</th>
+                        <th>Nome</th>
+                        <th>Setor</th>
+                        <th>Cargo</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <!-- Exibe dinamicamente os dados vindos do SQLite -->
+                    {% for f in funcionarios %}
+                    <tr>
+                        <td>{{ f[0] }}</td>
+                        <td>{{ f[1] }}</td>
+                        <td>{{ f[2] }}</td>
+                        <td>{{ f[3] }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+
+        </section>
+
+    </main>
+
+   <!-- Modal (Janela Flutuante) -->
+<div id="modalFuncionario" class="modal_overlay">
+    <div class="modal_content">
+        <div class="modal_header">
+            <h2>Novo Funcionário</h2>
+            <button class="close_btn" onclick="closeModal()">&times;</button>
+        </div>
+        
+        <form action="/funcionarios.html" method="POST">
+            <!-- A matrícula agora é gerada automaticamente -->
+
+            <label>Nome</label>
+            <input type="text" name="nome" placeholder="Digite o nome completo" required>
+
+            <label>Setor</label>
+            <input type="text" name="setor" placeholder="Ex: Produção" required>
+
+            <label>Cargo</label>
+            <input type="text" name="cargo" placeholder="Ex: Operador" required>
+
+            <button type="submit" class="button">Salvar</button>
+        </form>
+    </div>
+</div>
+    <!-- Script para controlar a exibição da janela flutuante -->
+    <script>
+        function openModal() {
+            document.getElementById('modalFuncionario').style.display = 'flex';
+        }
+        function closeModal() {
+            document.getElementById('modalFuncionario').style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>

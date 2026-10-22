@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+
+        <div class="logo">
+            Infratec
+        </div>
+
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="funcionarios.html">Funcionarios</a>
+            <a href="treinamentos.html">Treinamentos</a>
+            <a href="epis.html">EPIs</a>
+            <a href="ocorrencias.html">Ocorrencias</a>
+            <a href="inspecoes.html">Inspecoes</a>
+            <a href="profissionais.html">profissionais</a>
+            <a href="relatorios.html">relatorios</a>
+        </nav>
+
+    </header>
+
+    <main class="page">
+
+        <section class="page_header">
+
+            <p class="small_title">
+                INFRATEC
+            </p>
+
+            <h1>
+                Login
+            </h1>
+
+            <p>
+                Entre no sistema para acessar
+                suas informacoes.
+            </p>
+
+        </section>
+
+        <section class="table_box">
+
+            <form action="/login.html" method="POST">
+                <label>Email</label>
+                <br>
+                <input 
+                    type="email" 
+                    name="email" 
+                    placeholder="Digite seu email" 
+                    style="width: 95%; padding: 15px; margin-top: 8px; margin-bottom: 20px;" 
+                    required>
+            
+                <br>
+            
+                <label>Senha</label>
+                <br>
+                <input 
+                    type="password" 
+                    name="senha" 
+                    placeholder="Digite sua senha" 
+                    style="width: 95%; padding: 15px; margin-top: 8px;" 
+                    required>
+            
+                <br>
+            
+                <button type="submit" class="button">
+                    Entrar
+                </button>
+            </form>
+            
+            <p>
+                Ainda nao possui uma conta?
+                <a href="cadastro.html">
+                    Cadastre-se
+                </a>
+            </p>
+
+        </section>
+    
+    </main>
+</body>
+</html>

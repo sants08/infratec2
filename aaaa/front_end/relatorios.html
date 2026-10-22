@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatórios — Segurança no Trabalho</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="logo">SEGURANÇA</div>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="profissionais.html">Profissionais</a>
+            <a href="treinamentos.html">Treinamentos</a>
+            <a href="epi.html">EPIs</a>
+            <a href="inspecoes.html">Inspeções</a>
+            <a href="ocorrencias.html">Ocorrências</a>
+            <a href="relatorios.html">Relatórios</a>
+            <a href="sobre.html">Sobre</a>
+        </nav>
+    </header>
+
+    <!-- PÁGINA DE RELATÓRIOS -->
+    <main class="report_page">
+        
+        <!-- CABEÇALHO DA PÁGINA -->
+        <section class="report_title">
+            <span class="small_title">SST / INDICADORES E DOCUMENTAÇÃO</span>
+            <h1>Relatórios Técnicos e Gerenciais</h1>
+            <p>Gere laudos regulatórios (NRs), acompanhe estatísticas de acidentes e exporte relatórios consolidados para auditoria e fiscalização.</p>
+        </section>
+
+        <!-- CARDS DE MÉTRICAS RÁPIDAS -->
+        <section class="dashboard_cards">
+            <div class="dashboard_card">
+                <span>Taxa de Frequência</span>
+                <strong>2.4</strong>
+                <p>Acidentes por milhão/horas trabalhadas</p>
+            </div>
+
+            <div class="dashboard_card">
+                <span>Dias Sem Acidentes</span>
+                <strong>142</strong>
+                <p>Meta da unidade: 365 dias</p>
+            </div>
+
+            <div class="dashboard_card">
+                <span>Conformidade NRs</span>
+                <strong>96%</strong>
+                <p>Auditoria interna do mês atual</p>
+            </div>
+
+            <div class="dashboard_card">
+                <span>Treinamentos Válidos</span>
+                <strong>88%</strong>
+                <p>Colaboradores com NR em dia</p>
+            </div>
+        </section>
+
+        <!-- RELATÓRIOS REGULATÓRIOS E LAUDOS -->
+        <section class="dashboard_content">
+            <div class="content_box">
+                <h2>Documentos e Laudos Regulatórios (SST)</h2>
+                <p>Emita a documentação obrigatória exigida pelas Normas Regulamentadoras e Fiscalização do Trabalho.</p>
+                
+                <div style="margin-top: 20px; display: flex; flex-direction: column; gap: 15px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; background: #fff; padding: 15px; border: 2px solid var(--black); border-radius: 8px;">
+                        <div>
+                            <strong style="display: block; font-size: 16px;">PGR — Programa de Gerenciamento de Riscos</strong>
+                            <small style="color: var(--gray);">Atendimento à NR-01 | Atualizado em Set/2026</small>
+                        </div>
+                        <a href="#" class="button" style="margin-top: 0; padding: 8px 15px; font-size: 12px;">Gerar PDF</a>
+                    </div>
+
+                    <div style="display: flex; justify-content: space-between; align-items: center; background: #fff; padding: 15px; border: 2px solid var(--black); border-radius: 8px;">
+                        <div>
+                            <strong style="display: block; font-size: 16px;">PCMSO — Controle Médico de Saúde Ocupacional</strong>
+                            <small style="color: var(--gray);">Atendimento à NR-07 | Relatório Anual de Exames</small>
+                        </div>
+                        <a href="#" class="button" style="margin-top: 0; padding: 8px 15px; font-size: 12px;">Gerar PDF</a>
+                    </div>
+
+                    <div style="display: flex; justify-content: space-between; align-items: center; background: #fff; padding: 15px; border: 2px solid var(--black); border-radius: 8px;">
+                        <div>
+                            <strong style="display: block; font-size: 16px;">LTCAT — Laudo Técnico das Condições Ambientais</strong>
+                            <small style="color: var(--gray);">Documentação do eSocial / Aposentadoria Especial</small>
+                        </div>
+                        <a href="#" class="button" style="margin-top: 0; padding: 8px 15px; font-size: 12px;">Gerar PDF</a>
+                    </div>
+
+                    <div style="display: flex; justify-content: space-between; align-items: center; background: #fff; padding: 15px; border: 2px solid var(--black); border-radius: 8px;">
+                        <div>
+                            <strong style="display: block; font-size: 16px;">Ficha de Entrega e Controle de EPIs</strong>
+                            <small style="color: var(--gray);">Histórico por colaborador/setor (NR-06)</small>
+                        </div>
+                        <a href="#" class="button" style="margin-top: 0; padding: 8px 15px; font-size: 12px;">Gerar PDF</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- GERADOR DE RELATÓRIOS PERSONALIZADOS -->
+            <div class="content_box">
+                <h2>Gerar Relatório Customizado</h2>
+                <p>Selecione o período e o tipo de dados para exportar um relatório sob medida.</p>
+
+                <div class="table_box" style="margin-top: 15px; padding: 20px; border: none; background: transparent;">
+                    <form action="#" method="POST" style="display: flex; flex-direction: column; gap: 15px;">
+                        <div>
+                            <label for="tipo_relatorio">Tipo de Relatório</label>
+                            <select id="tipo_relatorio" name="tipo_relatorio" required>
+                                <option value="ocorrencias">Histórico de Ocorrências e Acidentes (CAT)</option>
+                                <option value="inspecoes">Relatório de Inspeções de Segurança</option>
+                                <option value="treinamentos">Matriz de Treinamentos Vencidos / A Vencer</option>
+                                <option value="epis">Estoque e Trocas de EPIs</option>
+                            </select>
+                        </div>
+
+                        <div style="display: flex; gap: 10px;">
+                            <div style="flex: 1;">
+                                <label for="data_inicio">Data Inicial</label>
+                                <input type="date" id="data_inicio" name="data_inicio" required>
+                            </div>
+                            <div style="flex: 1;">
+                                <label for="data_fim">Data Final</label>
+                                <input type="date" id="data_fim" name="data_fim" required>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="formato">Formato de Saída</label>
+                            <select id="formato" name="formato">
+                                <option value="pdf">Documento PDF (.pdf)</option>
+                                <option value="excel">Planilha Excel (.xlsx)</option>
+                                <option value="csv">Dados em CSV (.csv)</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="button">Exportar Relatório</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- TABELA DE HISTÓRICO DE EMISSÕES DE RELATÓRIOS -->
+        <section class="table_box">
+            <div class="table_header">
+                <h2>Histórico de Relatórios Gerados</h2>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>CÓDIGO</th>
+                        <th>NOME DO DOCUMENTO</th>
+                        <th>TIPO</th>
+                        <th>DATA EMISSÃO</th>
+                        <th>SOLICITANTE</th>
+                        <th>AÇÃO</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>#REL-089</strong></td>
+                        <td>Relatório Mensal de Acidentes e Quase-Acidentes</td>
+                        <td>Ocorrências</td>
+                        <td>01/10/2026</td>
+                        <td>Eng. Carlos Silva</td>
+                        <td><a href="#" class="priority_low" style="text-decoration: none;">Baixar</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>#REL-088</strong></td>
+                        <td>Acompanhamento de Validade de Treinamentos NR-35</td>
+                        <td>Capacitação</td>
+                        <td>28/09/2026</td>
+                        <td>Téc. Maria Oliveira</td>
+                        <td><a href="#" class="priority_low" style="text-decoration: none;">Baixar</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>#REL-087</strong></td>
+                        <td>Auditoria Externa de Conformidade de EPIs</td>
+                        <td>Inspeção</td>
+                        <td>15/09/2026</td>
+                        <td>Eng. Carlos Silva</td>
+                        <td><a href="#" class="priority_low" style="text-decoration: none;">Baixar</a></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- PAGINAÇÃO -->
+            <div class="pagination">
+                <button disabled>Anterior</button>
+                <button class="active">1</button>
+                <button>2</button>
+                <button>Próximo</button>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 Sistema de Gestão em Segurança do Trabalho. Todos os direitos reservados.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

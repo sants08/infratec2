@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ocorrencias</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            Infratec
+        </div>
+
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="funcionarios.html">Funcionarios</a>
+            <a href="treinamentos.html">Treinamentos</a>
+            <a href="epis.html">EPIs</a>
+            <a href="inspecoes.html">Inspecoes</a>
+            <a href="login.html">login</a>
+            <a href="profissionais.html">profissionais</a>
+            <a href="relatorios.html">relatorios</a>
+        </nav>
+    </header>
+
+    <main class="occurrence_page">
+
+        <section class="occurrence_intro">
+            <div>
+                <p class="small_title">
+                    SEGURANCA
+                </p>
+
+                <h1>
+                    Ocorrencias
+                </h1>
+
+                <p>
+                    Registro e acompanhamento de ocorrencias.
+                </p>
+            </div>
+
+            <div class="warning_shape">
+                !
+            </div>
+        </section>
+
+        <section class="table_box">
+            <div class="table_header">
+                <h2>
+                    Registro de ocorrencias
+                </h2>
+
+                <!-- 1. Evento onclick adicionado ao botão -->
+                <button class="button" onclick="openModal()">
+                    Nova ocorrencia
+                </button>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Matricula</th>
+                        <th>Tipo</th>
+                        <th>Gravidade</th>
+                        <th>Data</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    {% for o in ocorrencias %}
+                    <tr>
+                        <td>{{ o[0] }}</td>
+                        <td>{{ o[1] }}</td>
+                        <td>{{ o[2] }}</td>
+                        <td>{{ o[3] }}</td>
+                        <td>{{ o[4] }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Modal Nova Ocorrência -->
+        <div id="modalOcorrencia" class="modal_overlay">
+            <div class="modal_content">
+                <div class="modal_header">
+                    <h2>Nova Ocorrência</h2>
+                    <button class="close_btn" onclick="closeModal()">&times;</button>
+                </div>
+                <form action="/ocorrencias.html" method="POST">
+                    <label>Tipo de Ocorrência</label>
+                    <input type="text" name="tipo" placeholder="Ex: Queda, Corte" required>
+
+                    <label>Gravidade</label>
+                    <select name="gravidade" required>
+                        <option value="Leve">Leve</option>
+                        <option value="Média">Média</option>
+                        <option value="Grave">Grave</option>
+                    </select>
+
+                    <label>Data</label>
+                    <input type="date" name="data" required>
+
+                    <button type="submit" class="button">Registar</button>
+                </form>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- 2. Scripts JavaScript adicionados antes do fecho da body -->
+    <script>
+        function openModal() {
+            document.getElementById('modalOcorrencia').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('modalOcorrencia').style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>

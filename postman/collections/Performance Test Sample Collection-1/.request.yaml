@@ -1,0 +1,20 @@
+$kind: http-request
+name: ""
+url: http://127.0.0.1:8000/api/colaboradores
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \  \"email\": \"teste@empresa.com\",\r
+
+    \  \"senha\": \"senha123_segura\",\r
+
+    \  \"nome_funcionario\": \"Jeann Lucas\",\r
+
+    \  \"setor\": \"TI\",\r
+
+    \  \"cargo\": \"Desenvolvedor\"\r
+
+    }"
+order: 1000
